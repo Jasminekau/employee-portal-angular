@@ -1,12 +1,3 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AppComponent as App } from './app.component';
 
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-})
-export class App {
-  protected title = 'employee-management';
-}
+export { App };

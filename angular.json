@@ -56,6 +56,8 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+          },
           "configurations": {
             "production": {
               "buildTarget": "employee-management:build:production"
@@ -86,5 +88,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "561dcbf6-7ce0-45e0-bc62-dc21a90e4d88"
   }
 }
