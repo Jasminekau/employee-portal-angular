@@ -1,0 +1,63 @@
+<div class="container mt-3">
+  <h2>Employee Medical Policy Details</h2>
+  <button class="btn btn-primary mb-3" (click)="openAddModal()">Add Medical Detail</button>
+  <p>Total Dependents: {{ totalDependents }}</p>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Policy Name</th>
+        <th>Salary</th>
+        <th>Claimed Amount</th>
+        <th>Policy Max Amount</th>
+        <th>Balance Left</th>
+        <th>Number of Dependents</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of medicalDetails; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.policyName }}</td>
+        <td>{{ item.salary | currency:'INR' }}</td>
+        <td>{{ item.claimedAmount | currency:'INR' }}</td>
+        <td>{{ item.policyMaxAmount | currency:'INR' }}</td>
+        <td>{{ item.balanceLeft | currency:'INR' }}</td>
+        <td>{{ item.numberOfDependents }}</td>
+        <td>
+          <button class="btn btn-primary me-2" (click)="openEditModal(item)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteMedicalDetail(item.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="editMode || !editMode" class="modal" tabindex="-1" style="display:block; background: rgba(0,0,0,0.5);">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <h5>{{ editMode ? 'Edit Medical Detail' : 'Add Medical Detail' }}</h5>
+        <form [formGroup]="medicalForm" (ngSubmit)="submitForm()">
+          <div class="mb-3">
+            <label for="policyName" class="form-label">Policy Name</label>
+            <input id="policyName" type="text" class="form-control" formControlName="policyName" />
+          </div>
+          <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input id="salary" type="number" class="form-control" formControlName="salary" />
+          </div>
+          <div class="mb-3">
+            <label for="claimedAmount" class="form-label">Claimed Amount</label>
+            <input id="claimedAmount" type="number" class="form-control" formControlName="claimedAmount" />
+          </div>
+          <div class="mb-3">
+            <label for="numberOfDependents" class="form-label">Number of Dependents</label>
+            <input id="numberOfDependents" type="number" class="form-control" formControlName="numberOfDependents" />
+          </div>
+          <button type="submit" class="btn btn-success me-2" [disabled]="medicalForm.invalid">{{ editMode ? 'Update' : 'Add' }}</button>
+          <button type="button" class="btn btn-secondary" (click)="medicalForm.reset(); editMode = false; editId = null;">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

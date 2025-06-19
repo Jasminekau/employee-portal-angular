@@ -1,0 +1,90 @@
+/* Basic styling for the medical details component */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+button {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.modal-content {
+  padding: 10px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 6px 12px;
+  margin-right: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+}

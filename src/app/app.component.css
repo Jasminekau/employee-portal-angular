@@ -1,0 +1,12 @@
+/* Custom styles for app component */
+.container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+.header {
+  background-color: rgb(22, 190, 190) !important;
+}
+.navbar.header {
+  background-color: rgb(22, 190, 190) !important;
+}

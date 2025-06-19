@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "jason-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "Users": [
+    {
+      "id": "1a67",
+      "Name": "Lovedeep",
+      "Email": "love4@gmail.com",
+      "Profession": "Sourcer",
+      "Age": "26"
+    },
+    {
+      "id": "b5b6",
+      "Name": "Jasmine K",
+      "Email": "jk248799@gmail.com",
+      "Profession": "Developer",
+      "Age": "20"
+    },
+    {
+      "id": "1a67",
+      "Name": "Lovedeep",
+      "Email": "love6@gmail.com",
+      "Profession": "Sourcer",
+      "Age": "26"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
